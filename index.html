@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hc-robot-learning 2026 — Human-Centered Robot Learning and Interaction @ CoRL 2026</title>
+  <meta name="description" content="A CoRL 2026 workshop on human-centered robot learning and interaction: towards reliable and scalable autonomy in human environments. Austin, Texas, USA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="brand"><span class="dot"></span> hc-robot-learning <span>2026</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#overview">Overview</a>
+      <a href="#challenges">Challenges</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#cfp">Call for Papers</a>
+      <a href="#dates">Dates</a>
+      <a href="#organizers">Organizers</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary btn-sm" href="https://openreview.net/" target="_blank" rel="noopener">Submit Paper</a>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <svg class="i-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg>
+        <svg class="i-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="hero">
+  <div class="wrap hero-grid">
+   <div class="hero-text">
+    <span class="eyebrow"><span class="pulse"></span> In conjunction with CoRL 2026 · Austin, TX</span>
+    <h1>Human-Centered Robot Learning <span class="gradient-text">and Interaction</span></h1>
+    <p class="acronym">hc-robot-learning 2026<br>Toward Reliable and Scalable Autonomy in Human Environments</p>
+    <ul class="hero-meta" role="list">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> November 9, 2026</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Austin, Texas, USA</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> In-person</li>
+    </ul>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#cfp">Call for Papers
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn" href="#schedule">View Schedule</a>
+    </div>
+   </div>
+   <div class="hero-media">
+     <img src="assets/img/theme.png"
+          alt="Robots operating in human environments — an office, a home, a hospital, a sidewalk, and a warehouse." />
+   </div>
+  </div>
+</header>
+
+<!-- ===== OVERVIEW ===== -->
+<section class="section" id="overview">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Overview</span>
+      <h2>Robots must work in human environments</h2>
+    </div>
+    <div class="prose reveal" style="max-width:72ch">
+      <p>Robot learning has made rapid progress on isolated capabilities such as dexterous
+        manipulation, locomotion, navigation, physical reasoning, and increasingly general
+        vision-language-action models. Yet a central premise of real-world deployment is that robots
+        must operate in human environments and around humans: homes, hospitals, offices, warehouses,
+        and public spaces in which people are not only end-users, but also collaborators,
+        supervisors, demonstrators, and bystanders. These humans may introduce ambiguous
+        instructions, changing preferences, social expectations, physical constraints, and
+        safety-critical interruptions that current robot learning systems rarely handle in a reliable
+        and scalable way. Translating today's lab-scale demonstrations into real-world systems that
+        are reliable enough to be trusted, and scalable enough to be deployed across diverse users,
+        tasks, and settings, remains an open challenge that cuts across policy learning, perception,
+        interaction, adaptation, and safety.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CORE CHALLENGES ===== -->
+<section class="section" id="challenges">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Core challenges</span>
+      <h2>Six open problems</h2>
+    </div>
+    <div class="grid cols-3">
+      <article class="card reveal"><div class="ico">1</div><h3>Scalable data from people</h3><p>Interaction data at scale and quality, respecting privacy, consent, and effort.</p></article>
+      <article class="card reveal"><div class="ico">2</div><h3>Evaluation beyond task success</h3><p>Benchmarks for safety, social appropriateness, and recovery with a human in the loop.</p></article>
+      <article class="card reveal"><div class="ico">3</div><h3>Human-aware foundation models</h3><p>Grounding VLA models in physical contact, social norms, and human attention.</p></article>
+      <article class="card reveal"><div class="ico">4</div><h3>Robustness to human-induced shift</h3><p>Stable policies under clutter, interruptions, ambiguity, and untrained users.</p></article>
+      <article class="card reveal"><div class="ico">5</div><h3>Long-horizon interaction</h3><p>Turn-taking, intent inference, and repair over minutes-to-hours of shared activity.</p></article>
+      <article class="card reveal"><div class="ico">6</div><h3>Continual human feedback</h3><p>Learning online from preferences and corrections without forgetting or unsafe exploration.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SPEAKERS ===== -->
+<section class="section" id="speakers">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Invited speakers</span>
+      <h2>Speakers</h2>
+    </div>
+    <div class="grid cols-3">
+      <article class="card person reveal">
+        <img class="ava" src="assets/speakers/billard.jpg" alt="Aude Billard" data-initials="AB" />
+        <h3><a href="https://people.epfl.ch/aude.billard?lang=en" target="_blank" rel="noopener">Aude Billard</a></h3>
+        <p class="aff">EPFL</p>
+        <p class="bio">Full Professor at EPFL, where she heads the Learning Algorithms and Systems Laboratory (LASA). A pioneer of robot learning from demonstration, she develops methods that let robots acquire dexterous manipulation and reactive control skills from human guidance and adapt them safely during close physical interaction with people.</p>
+      </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/speakers/soh.jpg" alt="Harold Soh" data-initials="HS" />
+        <h3><a href="https://haroldsoh.com/" target="_blank" rel="noopener">Harold Soh</a></h3>
+        <p class="aff">National University of Singapore</p>
+        <p class="bio">Associate Professor at the National University of Singapore, where he leads the Collaborative, Learning, and Adaptive Robots (CLeAR) group. His work builds trustworthy interactive robots, spanning trust-aware human-robot interaction, tactile perception, and learning robot policies from human supervision and feedback.</p>
+      </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/speakers/bobu.jpg" alt="Andreea Bobu" data-initials="AB" />
+        <h3><a href="https://andreea7b.github.io/" target="_blank" rel="noopener">Andreea Bobu</a></h3>
+        <p class="aff">Massachusetts Institute of Technology</p>
+        <p class="bio">Assistant Professor at MIT (AeroAstro and CSAIL). Her research studies how robots can learn the right representations of human intent, combining robot learning, algorithmic human-robot interaction, and learning from human feedback to keep autonomous systems aligned with people's preferences.</p>
+      </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/speakers/baecher.jpg" alt="Moritz Bächer" data-initials="MB" />
+        <h3><a href="https://www.baecher.info/" target="_blank" rel="noopener">Moritz Bächer</a></h3>
+        <p class="aff">Disney Research Zurich</p>
+        <p class="bio">Lab Director for Robotics at Disney Research Zurich. He bridges computational design, differentiable simulation, and learning-based control to create believable robotic characters that move expressively and operate safely alongside people.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCHEDULE ===== -->
+<section class="section" id="schedule">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Format &amp; schedule</span>
+      <h2>Schedule</h2>
+    </div>
+    <div class="schedule reveal">
+      <div class="slot"><span class="time">0:00–0:15</span><div><p class="title">Opening &amp; live challenge poll</p></div></div>
+      <div class="slot"><span class="time">0:15–2:00</span><div><p class="title">Invited talks, clustered</p><p class="who">Four 20-min talks + Q&amp;A in two themed clusters with cross-talk.</p></div></div>
+      <div class="slot"><span class="time">2:00–2:40</span><div><p class="title">Poster &amp; live-demo session</p></div></div>
+      <div class="slot"><span class="time">2:40–3:15</span><div><p class="title">Fishbowl discussion</p></div></div>
+      <div class="slot"><span class="time">3:15–3:45</span><div><p class="title">Contributed spotlight talks</p></div></div>
+      <div class="slot"><span class="time">3:45–4:00</span><div><p class="title">Closing synthesis &amp; roadmap</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CALL FOR PAPERS ===== -->
+<section class="section" id="cfp">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Call for papers</span>
+      <h2>Contribute your work</h2>
+      <p>Extended abstracts up to 4 pages (excl. references) in the CoRL format, via OpenReview
+        (single-blind). <strong>Non-archival.</strong> All accepted papers are presented as posters;
+        3–4 are selected for spotlight talks. We welcome in-progress work, negative results, system
+        and demo papers, and cross-disciplinary contributions.</p>
+    </div>
+    <div class="hero-cta reveal" style="justify-content:center">
+      <a class="btn btn-primary" href="https://openreview.net/" target="_blank" rel="noopener">Submit Paper</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IMPORTANT DATES ===== -->
+<section class="section" id="dates">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Important dates</span>
+      <h2>Timeline</h2>
+    </div>
+    <div class="dates reveal">
+      <div class="date-row"><span class="d">~6 weeks before</span><span class="e">Submission deadline</span><span class="tag">Deadline</span></div>
+      <div class="date-row"><span class="d">~3 weeks before</span><span class="e">Decisions &amp; spotlight notifications</span><span class="tag">Review</span></div>
+      <div class="date-row"><span class="d">~1 week before</span><span class="e">Camera-ready posters &amp; slides</span><span class="tag">Final</span></div>
+      <div class="date-row highlight"><span class="d">November 9, 2026</span><span class="e">Workshop day @ CoRL 2026, Austin</span><span class="tag event">Event</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ORGANIZERS ===== -->
+<section class="section" id="organizers">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Organizers</span>
+      <h2>Organizing committee</h2>
+    </div>
+    <div class="grid cols-3">
+      <article class="card person reveal">
+        <img class="ava" src="assets/organizers/li.jpg" alt="Jiachen Li" data-initials="JL" />
+        <h3><a href="https://jiachenli94.github.io/" target="_blank" rel="noopener">Jiachen Li</a></h3>
+        <p class="aff">Georgia Institute of Technology</p>
+      </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/organizers/liang.jpg" alt="Jing Liang" data-initials="JL" />
+        <h3><a href="https://jingliangc.github.io/" target="_blank" rel="noopener">Jing Liang</a></h3>
+        <p class="aff">Stanford University</p>
+      </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/organizers/feng.jpg" alt="Yao Feng" data-initials="YF" />
+        <h3><a href="https://collegeai.tsinghua.edu.cn/en/People/Full_time_PI/YaoFeng.htm" target="_blank" rel="noopener">Yao Feng</a></h3>
+        <p class="aff">Tsinghua University</p>
+      </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/organizers/fan.jpg" alt="Zhiwen Fan" data-initials="ZF" />
+        <h3><a href="https://zhiwenfan.github.io/" target="_blank" rel="noopener">Zhiwen Fan</a></h3>
+        <p class="aff">Texas A&amp;M University</p>
+      </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/organizers/wang.jpg" alt="Zehao Wang" data-initials="ZW" />
+        <h3><a href="https://zehaowang983.github.io/" target="_blank" rel="noopener">Zehao Wang</a></h3>
+        <p class="aff">University of California, Riverside</p>
+      </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/organizers/bajcsy.jpg" alt="Andrea Bajcsy" data-initials="AB" />
+        <h3><a href="https://www.cs.cmu.edu/~abajcsy/" target="_blank" rel="noopener">Andrea Bajcsy</a></h3>
+        <p class="aff">Carnegie Mellon University</p>
+      </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/organizers/thumm.jpg" alt="Jakob Thumm" data-initials="JT" />
+        <h3><a href="https://jakob-thumm.com/" target="_blank" rel="noopener">Jakob Thumm</a></h3>
+        <p class="aff">Stanford University</p>
+      </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/organizers/chen.jpg" alt="Qi Chen" data-initials="QC" />
+        <h3><a href="https://www.linkedin.com/in/qi-chen-33915394/" target="_blank" rel="noopener">Qi Chen</a></h3>
+        <p class="aff">Toyota InfoTech Labs</p>
+      </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/organizers/liu.jpg" alt="Yongkang Liu" data-initials="YL" />
+        <h3><a href="https://scholar.google.com/citations?user=uRvYtOgAAAAJ" target="_blank" rel="noopener">Yongkang Liu</a></h3>
+        <p class="aff">Toyota InfoTech Labs</p>
+      </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/organizers/sisbot.jpg" alt="Akin Sisbot" data-initials="AS" />
+        <h3><a href="https://scholar.google.com/citations?user=1kUuSH8AAAAJ" target="_blank" rel="noopener">Akin Sisbot</a></h3>
+        <p class="aff">Toyota InfoTech Labs</p>
+      </article>
+      <article class="card person reveal">
+        <img class="ava" src="assets/organizers/nubert.jpg" alt="Julian Nubert" data-initials="JN" />
+        <h3><a href="https://juliannubert.com/" target="_blank" rel="noopener">Julian Nubert</a></h3>
+        <p class="aff">Flexion Robotics</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="contact">
+  <div class="wrap footer-grid">
+    <div style="max-width:34ch">
+      <h4>hc-robot-learning 2026</h4>
+      <p style="color:var(--text-soft); font-size:.92rem; margin:0 0 10px">Human-Centered Robot
+        Learning and Interaction — a CoRL 2026 workshop. Austin, TX · November 9, 2026.</p>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <a href="mailto:jinglms@stanford.edu">Contact organizers</a>
+      <a href="https://openreview.net/" target="_blank" rel="noopener">OpenReview</a>
+      <a href="https://www.corl.org/" target="_blank" rel="noopener">CoRL 2026</a>
+    </div>
+  </div>
+  <div class="wrap copy">© 2026 hc-robot-learning Workshop · Organized by the hc-robot-learning 2026 organizing committee.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

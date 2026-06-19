@@ -1,0 +1,26 @@
+# ============================================================
+# hc-robot-learning 2026 — Jekyll configuration
+# ============================================================
+title: "hc-robot-learning 2026 — Human-Centered Robot Learning and Interaction"
+description: >-
+  A CoRL 2026 workshop on human-centered robot learning and interaction:
+  towards reliable and scalable autonomy in human environments. Austin, Texas, USA.
+author: "Jing Liang, Jiachen Li, Yao Feng"
+
+# For GitHub Project Pages set baseurl to "/<repo-name>" (e.g. "/hcrl-2026")
+# and url to "https://<org>.github.io". Leave both empty for local dev or a
+# user/custom-domain site.
+baseurl: ""
+url: ""
+
+# index.html, styles.css, script.js and assets/ are plain static files —
+# Jekyll copies them through unchanged. Nothing else to build.
+exclude:
+  - README.md
+  - corl_workshop.pdf
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+# Live-reload friendly defaults
+incremental: false
