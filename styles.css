@@ -184,6 +184,15 @@ img { max-width:100%; display:block; }
 .submit-cta .ddl strong { color:var(--text); font-weight:600; }
 .submit-cta abbr { text-decoration:underline dotted; cursor:help; }
 
+/* sponsor marks sit on their own light plate: these logos are drawn for white
+   backgrounds and their black wordmarks would vanish on the dark page */
+.sponsors { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+.sponsor {
+  display:grid; place-items:center; padding:28px 40px; border-radius:var(--radius);
+  background:#fff; border:1px solid var(--border);
+}
+.sponsor img { width:auto; height:clamp(84px,9vw,116px); display:block; }
+
 /* schedule */
 .schedule { display:grid; gap:12px; }
 .slot { display:grid; grid-template-columns:120px 1fr; gap:22px; padding:18px 22px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); transition:.2s; }
