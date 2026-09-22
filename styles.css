@@ -52,6 +52,10 @@ body::before {
 a { color:var(--accent); text-decoration:none; transition:color .18s; }
 a:hover { color:var(--accent-2); }
 h1,h2,h3 { font-family:var(--font-display); font-weight:600; line-height:1.15; letter-spacing:-.02em; margin:0; }
+/* keep a lone word off the last line of a paragraph or heading; browsers without
+   text-wrap fall back to ordinary wrapping, so this only ever improves things */
+p, h1, h2, h3 { text-wrap:pretty; }
+h1, h2, h3, .person .bio, .person .aff, .card p, .hero .acronym, .section-head p { text-wrap:balance; }
 code { font-family:ui-monospace,monospace; font-size:.85em; background:var(--bg-card); padding:2px 6px; border-radius:6px; }
 img { max-width:100%; display:block; }
 .wrap { max-width:var(--maxw); margin:0 auto; padding:0 24px; }
@@ -205,11 +209,11 @@ img { max-width:100%; display:block; }
 .person { text-align:center; }
 .ava { width:112px; height:112px; border-radius:50%; object-fit:cover; margin:0 auto 16px; background:var(--grad); box-shadow:var(--shadow); position:relative; }
 .person h3 { margin:0 0 4px; font-size:1.1rem; }
-.person .aff { color:var(--text-soft); font-size:.9rem; margin:0; }
+.person .aff { color:var(--text-soft); font-size:.95rem; margin:0; }
 .person .talk { color:var(--text); font-style:italic; font-size:.88rem; margin:8px 0 0; }
 .person .role { display:inline-block; margin-top:10px; font-size:.76rem; color:var(--accent-2); text-transform:uppercase; letter-spacing:.1em; font-weight:600; }
 .person .email { font-size:.85rem; margin:8px 0 0; }
-.person .bio { color:var(--text-soft); font-size:.85rem; line-height:1.5; margin:8px 0 0; }
+.person .bio { color:var(--text-soft); font-size:.98rem; line-height:1.58; margin:10px 0 0; }
 .person h3 a { color:inherit; text-decoration:none; border-bottom:1px solid transparent; transition:.15s; }
 .person h3 a:hover { color:var(--accent-2); border-bottom-color:currentColor; }
 
