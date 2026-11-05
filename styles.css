@@ -250,3 +250,32 @@ img { max-width:100%; display:block; }
   .nav-toggle { display:grid; }
 }
 @media (max-width:560px){ .cols-2,.cols-3 { grid-template-columns:1fr; } }
+
+/* ===== Program committee: names only, read down the columns ===== */
+.pc-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 900px;
+  columns: 3;
+  column-gap: 32px;
+}
+.pc-list li {
+  break-inside: avoid;
+  padding: 7px 0 7px 16px;
+  position: relative;
+  color: var(--text-soft);
+  font-size: 1rem;
+}
+.pc-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.95em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+@media (max-width: 860px) { .pc-list { columns: 2; } }
+@media (max-width: 520px) { .pc-list { columns: 1; } }
