@@ -198,6 +198,7 @@ img { max-width:100%; display:block; }
 .sponsor img { width:auto; height:clamp(84px,9vw,116px); display:block; }
 
 /* schedule */
+.sched-note { color:var(--text-soft); font-size:1rem; margin:-18px 0 22px; }
 .schedule { display:grid; gap:12px; }
 .slot { display:grid; grid-template-columns:120px 1fr; gap:22px; padding:18px 22px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); transition:.2s; }
 .slot:hover { border-color:var(--border-strong); background:var(--bg-card-hover); }
