@@ -279,4 +279,4 @@ img { max-width:100%; display:block; }
 }
 @media (max-width: 860px) { .pc-list { columns: 2; } }
 @media (max-width: 520px) { .pc-list { columns: 1; } }
-.pc-lede { max-width:900px; margin:0 auto 22px; color:var(--text-soft); font-size:1.02rem; }
+.pc-lede { max-width:900px; margin:0 auto 26px; color:var(--text-soft); font-size:1.02rem; text-align:center; }
