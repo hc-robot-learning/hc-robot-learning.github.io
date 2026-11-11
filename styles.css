@@ -213,6 +213,11 @@ img { max-width:100%; display:block; }
 .slot .title .org { font-weight:400; color:var(--text-soft); }
 .slot .talk { font-weight:500; color:var(--text); margin:0 0 7px; max-width:72ch; }
 .slot .tbd { color:var(--text-faint); font-style:italic; font-weight:400; }
+/* Hanging indent so a wrapped bio lines up under itself, not under its label. */
+.slot .kv { padding-left:52px; text-indent:-52px; }
+.slot .k { display:inline-block; width:52px; text-indent:0; color:var(--text-faint);
+  font-family:var(--font-display); font-size:.74rem; font-weight:600;
+  text-transform:uppercase; letter-spacing:.08em; vertical-align:baseline; }
 .slot .title a, .slot .who a { color:inherit; border-bottom:1px solid transparent; transition:.15s; }
 .slot .title a:hover, .slot .who a:hover { color:var(--accent-2); border-bottom-color:currentColor; }
 
