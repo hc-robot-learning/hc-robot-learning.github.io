@@ -209,7 +209,10 @@ img { max-width:100%; display:block; }
 .sched-group-end { height:1px; background:var(--border); margin:2px 2px 10px; }
 .slot .time { font-family:var(--font-display); font-weight:600; color:var(--accent); white-space:nowrap; }
 .slot .title { font-weight:600; margin:0 0 3px; }
-.slot .who { color:var(--text-soft); font-size:.9rem; margin:0; }
+.slot .who { color:var(--text-soft); font-size:.9rem; line-height:1.65; margin:0; max-width:72ch; }
+.slot .title .org { font-weight:400; color:var(--text-soft); }
+.slot .talk { font-weight:500; color:var(--text); margin:0 0 7px; max-width:72ch; }
+.slot .tbd { color:var(--text-faint); font-style:italic; font-weight:400; }
 .slot .title a, .slot .who a { color:inherit; border-bottom:1px solid transparent; transition:.15s; }
 .slot .title a:hover, .slot .who a:hover { color:var(--accent-2); border-bottom-color:currentColor; }
 
