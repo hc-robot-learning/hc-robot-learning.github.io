@@ -294,6 +294,12 @@ img { max-width:100%; display:block; }
 .awards-list { max-width:820px; margin:44px auto 0; text-align:center; }
 .awards-list h3 { font-size:1.12rem; font-weight:600; color:var(--text); margin:0 0 4px; }
 .awards-list h3.aw-sub { margin-top:30px; }
+/* the winner keeps the ringed card it had before */
+.aw-feature {
+  background:var(--bg-card-hover); border-radius:var(--radius);
+  box-shadow:0 0 0 1.5px var(--accent) inset; padding:30px 34px 26px;
+}
+.aw-feature .aw-row { border-top:none; padding:12px 0 0; }
 .aw-row { padding:20px 0; border-top:1px solid var(--border); }
 .aw-row .t { margin:0 0 6px; font-size:1rem; line-height:1.45; color:var(--text); font-weight:500; }
 .aw-row .a { margin:0; font-size:.93rem; line-height:1.45; color:var(--text-soft); }
