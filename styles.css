@@ -289,17 +289,20 @@ img { max-width:100%; display:block; }
   font-family:var(--font-display); font-weight:600; font-size:1.3rem;
   letter-spacing:-.015em; color:var(--text); }
 
-/* ===== Accepted papers: winner, runner-up, then the finalists — all centred ===== */
+/* ===== Accepted papers: three cards, the winner ringed ===== */
 .submit-cta.cta-next { margin-top:14px; }
 .awards-list { max-width:820px; margin:44px auto 0; text-align:center; }
-.awards-list h3 { font-size:1.12rem; font-weight:600; color:var(--text); margin:0 0 4px; }
-.awards-list h3.aw-sub { margin-top:30px; }
-/* the winner keeps the ringed card it had before */
+.awards-list h3 { font-size:1.12rem; font-weight:600; color:var(--text); margin:0; }
 .aw-feature {
-  background:var(--bg-card-hover); border-radius:var(--radius);
-  box-shadow:0 0 0 1.5px var(--accent) inset; padding:30px 34px 26px;
+  background:var(--bg-card); border:1px solid var(--border);
+  border-radius:var(--radius); padding:28px 34px;
 }
-.aw-feature .aw-row { border-top:none; padding:12px 0 0; }
-.aw-row { padding:20px 0; border-top:1px solid var(--border); }
+.aw-feature + .aw-feature { margin-top:16px; }
+.aw-feature.is-best {
+  background:var(--bg-card-hover); border-color:transparent;
+  box-shadow:0 0 0 1.5px var(--accent) inset;
+}
+.aw-row { padding:14px 0 0; }
+.aw-row + .aw-row { margin-top:16px; padding-top:18px; border-top:1px solid var(--border); }
 .aw-row .t { margin:0 0 6px; font-size:1rem; line-height:1.45; color:var(--text); font-weight:500; }
 .aw-row .a { margin:0; font-size:.93rem; line-height:1.45; color:var(--text-soft); }
